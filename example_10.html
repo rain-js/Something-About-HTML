@@ -3,12 +3,25 @@
 <head>
 	<meta charset="utf-8" />
 	<title></title>
+	<style type="text/css">
+		.browser {
+			background-color: #f69;
+		}
+
+		.engine {
+			background-color: #f33;
+		}
+	</style>
 </head>
 <body>
 	<!-- 表格说明 -->
 	<table border="1">
 		<!-- caption 必须是table的第一个元素 -->
 		<caption>浏览器及其引擎</caption>
+		<colgroup>
+			<col class="browser" >
+			<col class="engine" span="2">
+		</colgroup>
 		<thead>
 			<tr>
 				<th>浏览器</th>
