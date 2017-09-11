@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<!-- data-* 自定义数据属性 -->
+	<ul>
+		<li data-id="1">苹果</li>
+		<li data-id="2">香蕉</li>
+		<li data-id="3">芒果</li>
+	</ul>
+
+	<script type="text/javascript">
+		var ul = document.querySelector('ul');
+
+		ul.addEventListener('click', function(e) {
+			var e = e || window.event;
+
+			//console.log(typeof e.target.tagName.toLowerCase())
+			if (e.target.tagName.toLowerCase() == 'li') {
+				console.log('data-id = ' + e.target.dataset.id)
+			}
+		})
+	</script>
+</body>
+</html>
