@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<!-- 文件上传 指定传输编码-->
+	<form action="/echo" method="POST" enctype="multipart/form-data">
+		<p>
+			<label>您的姓名：</label>
+			<input name="fullname">
+		</p>
+		<p>
+			<label>请选择简历：</label>
+			<input type="file" name="resume">
+		</p>
+		<p><button>提交</button></p>
+	</form>
+</body>
+</html>
