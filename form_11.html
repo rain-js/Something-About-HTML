@@ -22,22 +22,25 @@
 	</form>
 
 	<script type="text/javascript">
-		var form = document.querySelector('form');
+		(function() {
+			var form = document.querySelector('form');
 
-		form.addEventListener('input', update);
+			form.addEventListener('input', update);
 
-		function update() {
-			var data = new FormData(form),
-				height = parseFloat(data.get('height')),
-				weight = parseFloat(data.get('weight'));
+			function update() {
+				var data = new FormData(form),
+					height = parseFloat(data.get('height')),
+					weight = parseFloat(data.get('weight'));
+				
+				document.querySelector('[for="weight"]').value = weight;
+				document.querySelector('[for="weight height"]').value = getBMI(height, weight);
+			}
+
+			function getBMI(height, weight) {
+				return (weight / Math.pow(height, 2)).toFixed(2);
+			}
+		})();
 			
-			document.querySelector('[for="weight"]').value = weight;
-			document.querySelector('[for="weight height"]').value = getBMI(height, weight);
-		}
-
-		function getBMI(height, weight) {
-			return (weight / Math.pow(height, 2)).toFixed(2);
-		}
 
 	</script>
 </body>
