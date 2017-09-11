@@ -5,13 +5,17 @@
 	<title></title>
 </head>
 <body>
-	<select name="fruit">
-		<option value="1">苹果</option>
-		<option value="2">香蕉</option>
-		<option value="3">芒果</option>
-		<option value="4">菠萝</option>
-		<option value="5">榴莲</option>
-		<option value="6">木瓜</option>
-	</select>
+	<form action="/echo">
+		<select name="fruit" multiple size="6">
+			<option value="1">苹果</option>
+			<option value="2">香蕉</option>
+			<option value="3">芒果</option>
+			<option value="4">菠萝</option>
+			<option value="5">榴莲</option>
+			<option value="6">木瓜</option>
+		</select>
+		<p><button type="submit">提交</button></p>		
+	</form>
+	
 </body>
 </html>
